@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".DiaryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/editDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="날짜"
+                android:padding="10dp"
+                android:background="@drawable/border_rect_textview"
+                android:gravity="center"/>
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/editTitle"
+                android:layout_width="wrap_content"
+                android:minWidth="300dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:background="@drawable/border_rect_edit"
+                android:hint="제목"
+                android:gravity="center"/>
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/diaryPic"
+            android:layout_width="350dp"
+            android:layout_height="300dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/addimage"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TableRow>
+                <TextView
+                    android:background="@drawable/border_rect_textview"
+                    android:text="나이"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:padding="10dp"/>
+
+                <EditText
+                    android:id="@+id/editAge"
+                    android:layout_width="76dp"
+                    android:background="@drawable/border_rect_edit"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:textSize="15sp" />
+                <TextView
+                    android:id="@+id/ageUnit"
+                    android:background="@drawable/border_rect_unit"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:text="살"
+                    android:gravity="center"/>
+
+                <TextView
+                    android:background="@drawable/border_rect_textview"
+                    android:text="생일"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:id="@+id/textBirthday"
+                    android:background="@drawable/border_rect_edit"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:background="@drawable/border_rect_textview"
+                    android:text="이름"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:padding="10dp"/>
+                <EditText
+                    android:id="@+id/editName"
+                    android:background="@drawable/border_rect_edit"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_weight="0.75"/>
+
+                <TextView
+                    android:background="@drawable/border_rect_textview"
+                    android:text="태명"
+                    android:padding="10dp"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:id="@+id/fetusName"
+                    android:background="@drawable/border_rect_edit"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:layout_weight="0.4"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:background="@drawable/border_rect_textview"
+                    android:text="배변"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:padding="10dp"/>
+                <EditText
+                    android:id="@+id/editPottyCount"
+                    android:background="@drawable/border_rect_edit"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:hint="배변 횟수"
+                    android:layout_weight="0.01"/>
+
+                <TextView
+                    android:background="@drawable/border_rect_textview"
+                    android:text="상태"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:textSize="15sp"/>
+                <EditText
+                    android:id="@+id/editPottyStatus"
+                    android:background="@drawable/border_rect_edit"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:hint="배변 상태"
+                    android:gravity="center"
+                    android:layout_weight="1"/>
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:background="@drawable/border_rect_textview"
+                    android:text="특이\n사항"
+                    android:textSize="15sp"
+                    android:padding="10dp"/>
+
+                <EditText
+                    android:id="@+id/editSignificant"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/border_rect_edit"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:hint="첫 뒤집기 성공!"
+                    android:textSize="15sp" />
+
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:background="@drawable/border_rect_textview"
+                    android:text="건강\n상태"
+                    android:textSize="15sp"
+                    android:padding="10dp"/>
+                <EditText
+                    android:id="@+id/editHealth"
+                    android:background="@drawable/border_rect_edit"
+                    android:padding="10dp"
+                    android:textSize="15sp"
+                    android:hint="열나지 않고 건강"
+                    android:gravity="center"
+                    android:layout_weight="0.75"
+                    android:layout_height="match_parent"/>
+            </TableRow>
+        </TableLayout>
+        <EditText
+            android:id="@+id/editDiaryContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="300dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:hint="일기 내용"
+            android:gravity="left"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="취소"/>
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="저장"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
